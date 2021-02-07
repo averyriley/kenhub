@@ -39,7 +39,7 @@ export class CustomersController {
         });
       } catch (err) {
         return res.status(HttpStatus.BAD_REQUEST).json({
-          message: 'Error: Customer not created!',
+          message: err.message,
           status: 400,
         });
       }
